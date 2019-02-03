@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<!-- specifying the viewport meta name allows for responsive web browsing-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>CS 355</title>
+</head>
+
+<body id = "ipAddressBody">
+<!-- div that holds entire nav bar up top, put together to ensure uniformity -->
+<div class="topnav" id="this-navbar">
+ <a href="index.html" class="active" id="home">Home</a>
+
+<!-- div class that contains the drop down button Assignments. fa fa-caret-down is the downward triangle symbol -->
+ <div class="dropdown">
+   <button class="dropbtn" id="dropbtn">Assignments
+     <i class="fa fa-caret-down"></i>
+   </button>
+<!-- another div class for the content of the dropdown that will be revealed when clicked -->
+   <div class="dropdown-content" id="my-dropdown">
+     <a href="assignment0.html" target=_blank>Assignment 0</a>
+     <a href="index.html"> Assignment 1</a>
+     <a href="fileUpload.html">Assignment 2</a>
+     <a href="ipAddress.html">Assignment 3</a>
+   </div>
+ </div>
+<!-- the links to other html pages, which will be accessed via topnav a due to <a href> -->
+ <a href="https://learn.zybooks.com/zybook/QCCSCI355TeitelmanFall2018" target=_blank>ZyBooks</a>
+ <a href ="browserdisplayinfo.html"> Browser/Display Info </a>
+ <a href ="contact.html" class="contact"> Contact </a>
+ <a href ="https://github.com/MikeD42591" target=_blank> GitHub </a>
+<!-- the "icon" and "hamburger" div will be used later for smaller screen dropdown -->
+  <a class="icon" id="hamburger">
+   <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<form id ="ipForm" class = "ipForm">
+
+
+  <fieldset id="addresssProt">Select which addressing protocol: <br><br>
+    <input type="radio" value="ipv4" name="protocol" id="ipv4" >IPv4<br>
+    <input type="radio"  value="ipv6" name="protocol" id="ipv6" >IPv6
+  </fieldset>
+
+  <fieldset id="classfulOrClassless">If IPv4, classful or classless?<br><br>
+    <input type="radio" value="classful" name="classOrClassless" id="classful">Classful<br>
+    <input type="radio" value="classless" name="classOrClassless" id="classless">Classless<br>
+   </fieldset>
+
+   <fieldset id="whichClass">Which Class?<br><br>
+    <input type="radio" value="classA" name="classes" id="classA">Class A<br>
+    <input type="radio" value="classB" name="classes" id="classB">Class B<br>
+    <input type="radio" value="classC" name="classes" id="classC">Class C<br>
+    <input type="radio" value="classD" name="classes" id="classD">Class D<br>
+    <input type="radio" value="classE" name="classes" id="classE">Class E<br>
+   </fieldset>
+
+   <fieldset id="bitsPrefix">If IPv4: How many hosts do you need? <br><br> If IPv6: How many bits for network? <br><br>
+    <input type="text" id="hostsCount" size="50" value =" ">
+  </fieldset>
+
+
+
+
+  <fieldset id="howManyIPField">How many IP addresses do you need? <br><br>
+   <input id="howManyIPBox" size="50" value ="1">
+ </fieldset>
+
+
+  </form>
+  <div>
+  <button id="submitButton" value="Submit"> Submit </button>
+</div>
+
+<div id ="math"> </div>
+
+<div id ="IPCheck"> </div>
+
+
+<script src="dropnav.js"></script>
+<script src="form.js"></script>
+<script src="submit.js"></script>
+
+
+
+
+</body>
+</html>

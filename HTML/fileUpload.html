@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Assignment 2</title>
+</head>
+
+<body id = "file-upload-body">
+
+   <div class="topnav" id="this-navbar">
+   <a href="index.html" class="active" id="home">Home</a>
+
+  <!-- div class that contains the drop down button Assignments. fa fa-caret-down is the downward triangle symbol -->
+   <div class="dropdown">
+     <button class="dropbtn" id="dropbtn">Assignments
+       <i class="fa fa-caret-down"></i>
+     </button>
+  <!-- another div class for the content of the dropdown that will be revealed when clicked -->
+     <div class="dropdown-content" id="my-dropdown">
+       <a href="assignment0.html" target=_blank>Assignment 0</a>
+       <a href="index.html"> Assignment 1</a>
+       <a href="fileUpload.html">Assignment 2</a>
+       <a href="ipAddress.html">Assignment 3</a>
+     </div>
+   </div>
+  <!-- the links to other html pages, which will be accessed via topnav a due to <a href> -->
+   <a href="https://learn.zybooks.com/zybook/QCCSCI355TeitelmanFall2018" target=_blank>ZyBooks</a>
+   <a href ="browserdisplayinfo.html"> Browser/Display Info </a>
+   <a href ="contact.html" class="contact"> Contact </a>
+    <a href ="https://github.com/MikeD42591" target=_blank> GitHub </a>
+  <!-- the "icon" and "hamburger" div will be used later for smaller screen dropdown -->
+    <a class="icon" id="hamburger">
+     <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+<br>
+
+  <div id = "fileButtonDiv">
+  <input type = 'file' accept = 'text/plain' id = "fileButton"    onchange = 'openFile(event)'>
+  </div>
+
+<div id = "tableTry"> </div>
+
+<div id = "ipAddressTable"> </div>
+
+<div id = "chart"> </div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src = "fileUpload.js"> </script>
+<script src="dropnav.js"></script>
+
+</body>
+</html>

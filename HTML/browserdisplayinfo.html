@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CS 355</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content = "width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Browser Info</title>
+
+</head>
+
+
+<body style="background-image:url(wallpaper4.jpg)">
+
+<!-- The entire top navigation bar is tured into a div, in order to keep them organized together and easier to manipulate -->
+<div class="topnav" id="this-navbar">
+ <a href="index.html" id="home">Home</a>
+
+
+<!-- Another div is made for the dropdown menu created for assignments, to ensure they're uniform -->
+ <div class="dropdown">
+   <button class="dropbtn" id="dropbtn"> Assignments
+<!-- fa fa-caret-down is a unicode character used on buttons and look like
+ a triangle pointing down -->
+     <i class="fa fa-caret-down"></i>
+   </button>
+
+   <div class="dropdown-content" id=my-dropdown>
+     <a href="assignment0.html" target= _blank>Assignment 0</a>
+     <a href="index.html">Assignment 1</a>
+     <a href="fileUpload.html">Assignment 2</a>
+     <a href="ipAdress.html">Assignment 3</a>
+   </div>
+
+ </div>
+
+ <a href="https://learn.zybooks.com/zybook/QCCSCI355TeitelmanFall2018" target=_blank>ZyBooks</a>
+ <a href ="browserdisplayinfo.html" class="active"> Browser/Display Info </a>
+ <a href ="contact.html"> Contact </a>
+  <a href ="https://github.com/MikeD42591" target=_blank> GitHub </a>
+
+   <a class="icon" id="hamburger">
+   <i class="fa fa-bars"></i> </a>
+
+
+</div>
+
+<!-- Div that holds clickable buttons to display information about user's computer -->
+<div class = "display-button">
+<button onclick="browserName()" >Browser Name</button>
+<button onclick="browserVersion()">Browser Information</button>
+<button onclick="pixelDepth()" >Check the Pixel Depth</button>
+<button onclick="heightWidth()">Screen Height and Width</button>
+</div>
+
+
+<!-- This is the div class for the browser/display JS that will get and display information about the user's computer.
+     The id's are for functions, the attributes of the screen are passed into the paragraph this way -->
+<div class = "display-output">
+<p id="pixdepth"></p>
+<p id="name"></p>
+<p id="version"></p>
+<p id="heightwidth"></p>
+</div>
+
+<!-- Script links containing JS buttons for displaying browser attributes -->
+<script src="display.js"></script>
+<script src="browser.js"></script>
+<script src="dropnav.js"></script>
+
+</body>
+</html>
